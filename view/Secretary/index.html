@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/general.css">
+    <link rel="stylesheet" href="../../css/navigation.css">
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/cefde82d95.js" crossorigin="anonymous"></script>
+    <title>Secretaria</title>
+</head>
+
+<body>
+    <div class="navigation_2">
+        <div class="logo_content">
+            <div class="logo">
+                <i class="fas fa-atom"></i>
+                <div class="logo_name">Deogracias Cardona</div>
+            </div>
+            <i class="fas fa-bars" id="btn_menu"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a type="button" href="#" id="alumnos" onclick="loadDoc()">
+                    <i class="fas fa-user-plus"></i>
+                    <span class="links_name">Nuevo Alumno</span>
+                </a>
+                <span class="tooltip">Nuevo Alumno</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class="far fa-id-badge"></i>
+                    <span class="links_name">Carnet virtual</span>
+                </a>
+                <span class="tooltip">Carnet virtual</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fas fa-user-minus"></i>
+                    <span class="links_name">Retirar Alumno</span>
+                </a>
+                <span class="tooltip">Retirar Alumno</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fas fa-file-download"></i>
+                    <span class="links_name">Constancias</span>
+                </a>
+                <span class="tooltip">Constancias</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fas fa-file-signature"></i>
+                    <span class="links_name">Boletines</span>
+                </a>
+                <span class="tooltip">Boletines</span>
+            </li>
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="../../img/user.png" alt="">
+                    <div class="name_job">
+                        <div class="name">Dimitri Perez</div>
+                        <div class="job">Secretaria</div>
+                    </div>
+                </div>
+                <i class="fas fa-sign-out-alt" id="log_out"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#btn_menu");
+        let sidebar = document.querySelector(".navigation_2");
+
+        btn.onclick = function () {
+            sidebar.classList.toggle("active");
+        }
+
+        /* function loadDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.querySelector(".content").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "alumnos.html", true);
+            xhttp.send();
+        } */
+    </script>
+</body>
+
+</html>

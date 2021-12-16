@@ -1,0 +1,38 @@
+/* ESTILOS DE TEACHER/INDEX */
+:root {
+  --colorpage: #103061;
+  --colorwhite: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1600px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: repeat(4, auto);
+
+  grid-template-areas:
+    "header header header"
+    "content content content";
+}
+
+.container,
+.container .header,
+.container .content {
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.container .header {
+  background-image: linear-gradient(
+    to right,
+    var(--colorpage),
+    var(--colorwhite)
+  );
+  color: var(--colorwhite);
+  grid-area: header;
+}
+
+
